@@ -1,6 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const users = require('./routes/api/users');
+const profile = require('./routes/api/profile');
+const posts = require('./routes/api/posts');
+
 const app = express();
 
 // DB Config
@@ -13,6 +17,11 @@ mongoose
     .catch(err => console.log(err));
 
 app.get('/', (req, res) => res.send('Hello World'));
+
+// Use Routes
+app.use('/api/users', users);
+app.use('/api/profile', profile);
+app.use('/api/posts', posts);
 
 // process.env.PORT for Heroku, port 8080 for local
 const port = process.env.PORT || 8080;
