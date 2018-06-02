@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const ProfileSchema = new Schema({
     user: {
         // associate the user by its ID
-        type: Schema.Types.ObjectID,
+        type: Schema.Types.ObjectId,
         // reference the collection
         ref: 'users'
     },
