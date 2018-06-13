@@ -13,6 +13,25 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// Add headers
+app.use(function (req, res, next) {
+
+    // Allow website to connect
+    res.setHeader('Access-Control-Allow-Origin', 'http://devconnectpractice-ysongh.c9users.io:8080');
+
+    // Give premissions for request methods
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Allow request headers
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true to allow website to include cookies in the requests sent to the API
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
+    next();
+});
+
 // DB Config
 const db = require('./config/keys').mongoURI;
 
