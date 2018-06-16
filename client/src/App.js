@@ -15,8 +15,8 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Provider>
-        <Router store={store}>
+      <Provider store={store}>
+        <Router>
           <div className="App">
             <Navbar />
             <Route exact path="/" component={Landing} />
