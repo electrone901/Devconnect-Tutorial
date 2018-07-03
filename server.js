@@ -20,10 +20,10 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://devconnectpractice-ysongh.c9users.io:8080');
 
     // Give premissions for request methods
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE, HEAD');
 
     // Allow request headers
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
 
     // Set to true to allow website to include cookies in the requests sent to the API
     res.setHeader('Access-Control-Allow-Credentials', true);
