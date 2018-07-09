@@ -4,7 +4,7 @@ import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-//import { addEducation } from '../../actions/profileActions';
+import { addEducation } from '../../actions/profileActions';
 
 class AddEducation extends Component{
     constructor(props){
@@ -90,7 +90,7 @@ class AddEducation extends Component{
                                     error={errors.degree}
                                 />
                                 <TextFieldGroup
-                                    placeholder="Field of Study"
+                                    placeholder="* Field of Study"
                                     name="fieldofstudy"
                                     value={this.state.fieldofstudy}
                                     onChange={this.onChange}
@@ -124,7 +124,7 @@ class AddEducation extends Component{
                                         id="current"
                                     />
                                     <label htmlFor="current" className="form-check-label">
-                                        Current Job
+                                        Enroll
                                     </label>
                                 </div>
                                 <TextAreaFieldGroup
@@ -156,4 +156,4 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps)(withRouter(AddEducation));
+export default connect(mapStateToProps, {addEducation})(withRouter(AddEducation));
