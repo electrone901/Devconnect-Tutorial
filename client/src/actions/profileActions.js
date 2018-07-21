@@ -2,7 +2,7 @@ import axios from '../axios-lists';
 
 import { GET_PROFILE, GET_PROFILES, PROFILE_LOADING, CLEAR_CURRENT_PROFILE, GET_ERRORS, SET_CURRENT_USER } from './types';
 
-// Get  current profile
+// Get current profile
 export const getCurrentProfile = () => dispatch => {
     dispatch(setProfileLoading());
     axios.get('/api/profile')
@@ -16,6 +16,24 @@ export const getCurrentProfile = () => dispatch => {
             dispatch({
                 type: GET_PROFILE,
                 payload: {}
+            })
+        );
+};
+
+// Get profile by handle
+export const getProfileByHandle = (handle) => dispatch => {
+    dispatch(setProfileLoading());
+    axios.get(`/api/profile/handle/${handle}`)
+        .then(res =>
+            dispatch({
+                type: GET_PROFILE,
+                payload: res.data
+            })
+        )
+        .catch(err => 
+            dispatch({
+                type: GET_PROFILE,
+                payload: null
             })
         );
 };
