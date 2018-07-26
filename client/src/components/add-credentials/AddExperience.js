@@ -16,7 +16,7 @@ class AddExperience extends Component{
             from: '',
             to: '',
             current: false,
-            descritpion: '',
+            description: '',
             errors: {},
             disabled: false
         };
@@ -42,7 +42,7 @@ class AddExperience extends Component{
             from: this.state.from,
             to: this.state.to,
             current: this.state.current,
-            descritpion: this.state.descritpion
+            description: this.state.description
         };
         
         this.props.addExperience(expData, this.props.history);
@@ -129,10 +129,10 @@ class AddExperience extends Component{
                                 </div>
                                 <TextAreaFieldGroup
                                     placeholder="Job Description"
-                                    name="descritpion"
-                                    value={this.state.descritpion}
+                                    name="description"
+                                    value={this.state.description}
                                     onChange={this.onChange}
-                                    error={errors.descritpion}
+                                    error={errors.description}
                                     info="Tell us about the position"
                                 />
                                 <input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />

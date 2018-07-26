@@ -16,7 +16,7 @@ class AddEducation extends Component{
             from: '',
             to: '',
             current: false,
-            descritpion: '',
+            description: '',
             errors: {},
             disabled: false
         };
@@ -42,7 +42,7 @@ class AddEducation extends Component{
             from: this.state.from,
             to: this.state.to,
             current: this.state.current,
-            descritpion: this.state.descritpion
+            description: this.state.description
         };
         
         this.props.addEducation(eduData, this.props.history);
@@ -129,10 +129,10 @@ class AddEducation extends Component{
                                 </div>
                                 <TextAreaFieldGroup
                                     placeholder="Program Description"
-                                    name="descritpion"
-                                    value={this.state.descritpion}
+                                    name="description"
+                                    value={this.state.description}
                                     onChange={this.onChange}
-                                    error={errors.descritpion}
+                                    error={errors.description}
                                     info="Tell us about the program that you were in"
                                 />
                                 <input type="submit" value="Submit" className="btn btn-info btn-block mt-4" />
