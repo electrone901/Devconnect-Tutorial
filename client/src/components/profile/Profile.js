@@ -22,8 +22,9 @@ class Profile extends Component{
         let profileContent;
         
         if(profile === null || loading){
-            profileContent = <Spinner />
+            profileContent = <Spinner />;
         }
+        
         else{
             profileContent = (
                 <div>
@@ -39,7 +40,6 @@ class Profile extends Component{
                     <ProfileAbout profile={profile} />
                     <ProfileCreds education={profile.education} experience={profile.experience} />
                     {profile.githubusername ? (<ProfileGithub username={profile.githubusername} />) : null}
-                    
                 </div>
             );
         }
