@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
 //import { connect } from 'react-redux';
-//import PostForm from './PostForm';
+import PostForm from './PostForm';
 //import Spinner from '../common/Spinner';
 
 class Posts extends Component{
@@ -11,7 +11,7 @@ class Posts extends Component{
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h1>post feed</h1>
+                            <PostForm />
                         </div>
                     </div>
                 </div>
