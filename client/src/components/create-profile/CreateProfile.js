@@ -231,7 +231,7 @@ class CreateProfile extends Component{
     }
 }
 
-CreateProfile.propsTypes = {
+CreateProfile.propTypes = {
     profile: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
 };

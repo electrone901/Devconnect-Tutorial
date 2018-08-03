@@ -41,7 +41,7 @@ class Experience extends Component {
     }
 }
 
-Experience.proptype = {
+Experience.propTypes = {
     deleteExperience: PropTypes.func.isRequired
 };
 

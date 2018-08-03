@@ -41,7 +41,7 @@ class Education extends Component {
     }
 }
 
-Education.proptype = {
+Education.propTypes = {
     deleteEducation: PropTypes.func.isRequired
 };
 
