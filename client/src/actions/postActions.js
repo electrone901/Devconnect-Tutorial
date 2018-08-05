@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../axios-lists';
 
 import{
     ADD_POST,
