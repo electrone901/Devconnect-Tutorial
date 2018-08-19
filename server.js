@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(function (req, res, next) {
 
     // Allow website to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://devconnectpractice-ysongh.c9users.io:8080', 'https://devnetpractice.herokuapp.com/');
+    res.setHeader('Access-Control-Allow-Origin', '*');
 
     // Give premissions for request methods
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE, HEAD');
