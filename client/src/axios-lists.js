@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiURL = process.env.hostURL || "https://devconnectpractice-ysongh.c9users.io:8081";
+const apiURL = process.env.hostURL || "https://devnetpractice.herokuapp.com";
 
 const instance = axios.create({
    baseURL: apiURL 
